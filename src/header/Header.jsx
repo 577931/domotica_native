@@ -1,21 +1,22 @@
 import React from 'react';
-import './styles/Header.css';
+import { View, Text } from 'react-native';
 import Logo from './Logo';
+import styles from '../styless/styless';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className='menu'>
-        <h1 className="menu-text">=</h1>
-      </div>
-      <div className='centrado'>
+    <View style={styles.header}>
+      <View style={styles.menu}>
+        <Text style={styles.menuText}>=</Text>
+      </View>
+      <View style={styles.centrado}>
         <Logo />
-        <h1>Domotiza2</h1>
-      </div>
-      <div className='beta'>
-        <h1 className="beta-text">B E T A</h1>
-      </div>
-    </header>
+        <Text style={styles.headerText}>Domotiza2</Text>
+      </View>
+      <View style={styles.beta}>
+        <Text style={styles.betaText}>B E T A</Text>
+      </View>
+    </View>
   );
 };
 
