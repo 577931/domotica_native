@@ -69,7 +69,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <CardRow cards={cards} cambiarEstado={cambiarEstado} />
+      <CardRow cards={cards} setCards={setCards} cambiarEstado={cambiarEstado} />
     </View>
   );
 };

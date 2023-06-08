@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Card from './Card';
 import styles from '../styless/styless';
 
-const CardRow = ({ cards }) => {
+const CardRow = ({ cards, setCards }) => {
   const obtenerEstado = (nombre) => {
     fetch(`http://psp.grupito8.com/api/index.php?action=estado&name=${nombre}`)
       .then(response => response.json())
