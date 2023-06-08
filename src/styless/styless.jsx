@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 10,
     marginBottom: 10,
-    borderRadius: 5,
+    borderRadius: 10, // Ajusta el valor según el redondeo deseado
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cardTitle: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
     marginBottom: 5,
   },
   cardSubtitle: {
-    fontSize: 14,
+    fontSize: 15,
     color: '#888',
   },
   btn: {
