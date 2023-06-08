@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image } from 'react-native';
 import logo from './images/bombi.png';
 import styles from '../styless/styless';
 

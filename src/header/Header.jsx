@@ -14,7 +14,7 @@ const Header = () => {
         <Text style={styles.headerText}>Domotiza2</Text>
       </View>
       <View style={styles.beta}>
-        <Text style={styles.betaText}>B E T A</Text>
+        <Text style={styles.betaText}>BETA</Text>
       </View>
     </View>
   );

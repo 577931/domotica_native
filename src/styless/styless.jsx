@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
   betaText: {
     color: 'white',
     margin: 0,
+    fontStyle: 'bold',
   },
   imageContainer: {
     flex: 1,
