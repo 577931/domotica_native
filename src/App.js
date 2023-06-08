@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
-import Header from './src/header/Header';
-import Card from './src/cards/Card';
-import styles from './src/styless/styless';
+import Header from './header/Header';
+import Card from './cards/Card';
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -67,9 +65,9 @@ const App = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <div>
       <Header />
-      <View style={styles.cardContainer}>
+      <div className="card-container">
         {cards.map(card => (
           <Card
             key={card.nombre}
@@ -78,8 +76,8 @@ const App = () => {
             cambiarEstado={cambiarEstado}
           />
         ))}
-      </View>
-    </View>
+      </div>
+    </div>
   );
 };
 
