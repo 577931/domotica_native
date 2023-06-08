@@ -68,7 +68,7 @@ const Card = ({ nombre, estado, cambiarEstado }) => {
       </View>
       <View style={styles.cardBody}>
         <Text style={styles.cardTitle}>{nombre}</Text>
-        <Text style={styles.cardSubtitle}>Estado actual: {estado}</Text>
+        <Text style={styles.cardSubtitle}>Estado: {estado}</Text>
         <View style={styles.buttonRow}>
           <TouchableOpacity
             onPress={() => handleCambiarEstado('encendido')}

@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
+    margin: '30px',
   },
   headerText: {
     fontSize: 20,
@@ -111,8 +112,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   squareButton: {
-    width: 20,
-    height: 20,
+    width: 30,
+    height: 30,
     marginHorizontal: 5,
     borderRadius: 5,
   },
