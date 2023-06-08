@@ -69,18 +69,16 @@ const Card = ({ nombre, estado, cambiarEstado }) => {
       <View style={styles.cardBody}>
         <Text style={styles.cardTitle}>{nombre}</Text>
         <Text style={styles.cardSubtitle}>Estado actual: {estado}</Text>
-        <TouchableOpacity
-          onPress={() => handleCambiarEstado('encendido')}
-          style={[styles.btn, styles.btnSuccess]}
-        >
-          <Text style={styles.btnText}>Encender</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => handleCambiarEstado('apagado')}
-          style={[styles.btn, styles.btnDanger]}
-        >
-          <Text style={styles.btnText}>Apagar</Text>
-        </TouchableOpacity>
+        <View style={styles.buttonRow}>
+          <TouchableOpacity
+            onPress={() => handleCambiarEstado('encendido')}
+            style={[styles.squareButton, styles.btnSuccess]}
+          />
+          <TouchableOpacity
+            onPress={() => handleCambiarEstado('apagado')}
+            style={[styles.squareButton, styles.btnDanger]}
+          />
+        </View>
       </View>
     </View>
   );

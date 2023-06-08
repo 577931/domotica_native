@@ -108,11 +108,22 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
+  squareButton: {
+    width: 20,
+    height: 20,
+    marginHorizontal: 5,
+    borderRadius: 5,
+  },
   btnSuccess: {
     backgroundColor: 'green',
   },
   btnDanger: {
     backgroundColor: 'red',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
   },
 });
 

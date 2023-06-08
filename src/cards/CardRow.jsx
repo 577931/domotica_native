@@ -1,32 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { View } from 'react-native';
-import Header from './src/header/Header';
-import CardRow from './src/cards/CardRow';
-import styles from './src/styless/styless';
+import Card from './Card';
+import styles from '../styless/styless';
 
-const App = () => {
-  const [cards, setCards] = useState([]);
-
-  const obtenerNombres = () => {
-    fetch('http://psp.grupito8.com/api/index.php?action=estados')
-      .then(response => response.json())
-      .then(data => {
-        setCards(data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  };
-
-  useEffect(() => {
-    obtenerNombres(); // Llamada inicial a obtenerNombres
-
-    // Limpieza del efecto
-    return () => {
-      // Realizar alguna limpieza si es necesario
-    };
-  }, []);
-
+const CardRow = ({ cards }) => {
   const obtenerEstado = (nombre) => {
     fetch(`http://psp.grupito8.com/api/index.php?action=estado&name=${nombre}`)
       .then(response => response.json())
@@ -47,7 +24,7 @@ const App = () => {
       });
   };
 
-  const cambiarEstado = (nuevoEstado, nombre) => {
+  const handleCambiarEstado = (nuevoEstado, nombre) => {
     fetch('http://psp.grupito8.com/api/index.php', {
       method: 'POST',
       headers: {
@@ -67,11 +44,17 @@ const App = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Header />
-      <CardRow cards={cards} cambiarEstado={cambiarEstado} />
+    <View style={styles.cardContainer}>
+      {cards.map(card => (
+        <Card
+          key={card.nombre}
+          nombre={card.nombre}
+          estado={card.estado}
+          cambiarEstado={handleCambiarEstado}
+        />
+      ))}
     </View>
   );
 };
 
-export default App;
+export default CardRow;
